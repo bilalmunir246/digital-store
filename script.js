@@ -1,27 +1,23 @@
-const wa="923198682932";
-const catalogEl=document.getElementById("catalog");
-function waLink(service){
-  const text=`Hi DIGITAL STORE, I want to order: ${service}`;
-  return `https://wa.me/${wa}?text=${encodeURIComponent(text)}`;
-}
-const icons={pink:"◈",purple:"✦",green:"✧",red:"▶",blue:"▣",magenta:"♥",gold:"✦",cyan:"◆"};
-CATALOG.forEach((cat,i)=>{
-  const card=document.createElement("article");
-  card.className=`service-card reveal`;
-  card.innerHTML=`<div class="service-head"><div><div class="service-no">0${String(i+1).padStart(2,"0")}</div><div class="service-title">${cat.category}</div></div><div style="color:#d6aa58;font-size:18px">${icons[cat.accent]||"✦"}</div></div><div class="service-list"></div>`;
-  const list=card.querySelector(".service-list");
-  cat.items.forEach(item=>{
-    const [name,meta,price,old]=item;
-    const row=document.createElement("div");
-    row.className="service-row";
-    row.innerHTML=`<div><div class="service-name">${name}</div><span class="service-meta">${meta}</span></div><div style="text-align:right"><div class="price">${old?`<s style="color:#68696c;font-size:10px;margin-right:5px">${old}</s> ❌ → `:""}${price}</div><button class="order-mini" type="button">ORDER NOW</button></div>`;
-    row.querySelector("button").addEventListener("click",()=>window.open(waLink(name),"_blank","noopener"));
-    list.appendChild(row);
-  });
-  catalogEl.appendChild(card);
-});
-const obs=new IntersectionObserver(entries=>{
-  entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add("visible");obs.unobserve(e.target)}});
-},{threshold:.12});
-document.querySelectorAll(".reveal").forEach(el=>obs.observe(el));
-document.querySelectorAll("details").forEach(d=>d.addEventListener("toggle",()=>{if(d.open)d.querySelector("summary span").textContent="−";else d.querySelector("summary span").textContent="+";}));
+const WA='923198682932';
+const catalogEl=document.getElementById('catalog');
+const modal=document.getElementById('service-modal');
+const modalContent=document.getElementById('modal-content');
+const visualMap={
+ 'TikTok Services':{class:'tiktok',icon:'♪',label:'TIKTOK SERVICES',sub:'SHORT-FORM / CREATOR TOOLS',tiles:['TIKTOK','COINS','ACCOUNT','FAST'],tag:'SOCIAL ENERGY'},
+ 'Video Editor & Creative Tools':{class:'creative',icon:'✦',label:'CREATIVE TOOLS',sub:'EDIT / DESIGN / CREATE',tiles:['CAPCUT','CANVA','4K','PRO'],tag:'CREATIVE MODE'},
+ 'AI & Productivity Tools':{class:'ai',icon:'◎',label:'AI & PRODUCTIVITY',sub:'SMART TOOLS / WORKFLOW',tiles:['CHATGPT','GEMINI','AI','WORK'],tag:'INTELLIGENT MODE'},
+ 'Entertainment & VPN':{class:'entertainment',icon:'▶',label:'ENTERTAINMENT & VPN',sub:'STREAM / CONNECT / PRIVACY',tiles:['YOUTUBE','NETFLIX','VPN','HD'],tag:'ENTERTAINMENT'},
+ 'Software & Digital Tools':{class:'software',icon:'▣',label:'SOFTWARE & TOOLS',sub:'SOFTWARE / DIGITAL ESSENTIALS',tiles:['WINDOWS','IDM','SHOPIFY','CPM'],tag:'DIGITAL ESSENTIALS'},
+ 'Likee Services':{class:'likee',icon:'♥',label:'LIKEE SERVICES',sub:'LIKES / VIEWS / REPOSTS / FOLLOWERS',tiles:['LIKES','VIEWS','REPOSTS','FOLLOWERS'],tag:'LIKEE GROWTH'},
+ 'Social Media Growth':{class:'growth',icon:'↗',label:'SOCIAL MEDIA GROWTH',sub:'INSTAGRAM / TIKTOK / YOUTUBE / MORE',tiles:['INSTAGRAM','TIKTOK','YOUTUBE','FACEBOOK'],tag:'GROWTH MODE'},
+ 'Google Plan':{class:'google',icon:'G',label:'GOOGLE PLAN',sub:'STORAGE / GEMINI / AI / FLOW',tiles:['5 TB','GEMINI','AI','FLOW'],tag:'GOOGLE AI BUNDLE'}
+};
+function waLink(service){return `https://wa.me/${WA}?text=${encodeURIComponent('Hi DIGITAL STORE, I want to order: '+service)}`;}
+function visual(cat,v,large=false){const n=String(CATALOG.indexOf(cat)+1).padStart(2,'0');return `<div class="experience ${v.class} ${large?'large':''}"><div class="exp-top"><span>${n} / DIGITAL STORE</span><b>${v.tag}</b></div><div class="exp-grid"></div><div class="exp-orbit orbit-a"></div><div class="exp-orbit orbit-b"></div><div class="exp-center"><div class="exp-icon">${v.icon}</div><strong>${v.label}</strong><small>${v.sub}</small></div><div class="exp-tiles">${v.tiles.map((t,i)=>`<span style="--i:${i}">${t}</span>`).join('')}</div><div class="exp-scan"></div></div>`;}
+function row(cat,item,idx){const [name,meta,price,old]=item; if(cat.type==='bundle'&&idx>0)return `<div class="service-row included-row"><div><strong>${name}</strong><small>${meta}</small></div><span class="included">INCLUDED</span></div>`;return `<div class="service-row"><div><strong>${name}</strong><small>${cat.type==='bundle'?'18 Month Plan':meta}</small></div><div class="price-area">${old?`<s>${old}</s><em>❌</em><b>→ ${price}</b>`:`<b>${price}</b>`}<a class="order-mini" target="_blank" rel="noopener" href="${waLink(name)}">ORDER NOW ↗</a></div></div>`;}
+CATALOG.forEach((cat,i)=>{const v=visualMap[cat.category];const card=document.createElement('article');card.className=`service-card reveal ${v.class}`;card.innerHTML=`<div class="card-head"><div><span class="number">${String(i+1).padStart(2,'0')}</span><h3>${cat.category}</h3><p>${v.sub}</p></div><span class="card-icon">${v.icon}</span></div>${visual(cat,v)}<div class="card-actions"><button class="open-experience">OPEN ${cat.category.toUpperCase()} EXPERIENCE ↗</button><button class="toggle-services">VIEW SERVICES ↓</button></div><div class="service-list"><div class="list-head"><span>${cat.type==='bundle'?'PLAN INCLUDES':'SERVICES & PRICES'}</span><b>${cat.items.length} ITEMS</b></div>${cat.items.map((x,j)=>row(cat,x,j)).join('')}</div>`;catalogEl.appendChild(card);card.querySelector('.open-experience').onclick=()=>openModal(cat,v);card.querySelector('.toggle-services').onclick=e=>{card.classList.toggle('expanded');e.currentTarget.textContent=card.classList.contains('expanded')?'HIDE SERVICES ↑':'VIEW SERVICES ↓';});});
+function openModal(cat,v){modalContent.innerHTML=`<div class="modal-kicker">${String(CATALOG.indexOf(cat)+1).padStart(2,'0')} / DIGITAL STORE</div><h2>${cat.category}</h2><p class="modal-desc">${v.sub}</p>${visual(cat,v,true)}<div class="modal-list"><div class="list-head"><span>${cat.type==='bundle'?'PLAN INCLUDES':'SERVICES & PRICES'}</span><b>${cat.items.length} ITEMS</b></div>${cat.items.map((x,j)=>row(cat,x,j)).join('')}</div>`;modal.classList.add('open');modal.setAttribute('aria-hidden','false');document.body.classList.add('modal-open');}
+function closeModal(){modal.classList.remove('open');modal.setAttribute('aria-hidden','true');document.body.classList.remove('modal-open');}
+modal.addEventListener('click',e=>{if(e.target.matches('[data-close]'))closeModal();});document.addEventListener('keydown',e=>{if(e.key==='Escape')closeModal();});
+const obs=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target);}}),{threshold:.08});document.querySelectorAll('.reveal').forEach(x=>obs.observe(x));
+document.querySelectorAll('details').forEach(d=>d.addEventListener('toggle',()=>d.querySelector('summary span').textContent=d.open?'−':'+'));
