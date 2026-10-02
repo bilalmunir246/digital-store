@@ -1,14 +1,15 @@
-DIGITAL STORE — FINAL WEBSITE PACKAGE
-=====================================
-Brand: DIGITAL STORE
-Tagline: ALL YOUR DIGITAL NEEDS IN ONE PLACE
-WhatsApp: 03198682932 (+92 319 8682932)
+DIGITAL STORE — GitHub Pages Ready
+======================================
+Upload these files to the root of the repository:
+index.html
+style.css
+script.js
+portrait.png
 
-Files:
-- index.html — complete website
-- style.css — premium responsive design and animations
-- script.js — category experiences, service rendering and WhatsApp ordering
-- catalog.js — editable service names/prices/catalog data
-- portrait.png — final circular/cutout founder visual
+GitHub Pages:
+Settings -> Pages -> Deploy from a branch -> main -> /(root)
 
-The catalog uses the confirmed current values. Each category has a visual/animated experience first, followed by its complete services and prices. Every order button opens WhatsApp with the selected service pre-filled.
+WhatsApp: 03198682932
+URL: https://wa.me/923198682932
+
+The website content is in index.html. JavaScript only handles category filtering and reveal animation, so a JS error cannot blank the page.

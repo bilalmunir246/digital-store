@@ -1,49 +1,834 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#07080b"><meta name="description" content="DIGITAL STORE — ALL YOUR DIGITAL NEEDS IN ONE PLACE.">
-<title>DIGITAL STORE — ALL YOUR DIGITAL NEEDS IN ONE PLACE</title>
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#080909">
+<meta name="description" content="DIGITAL STORE — All your digital needs in one place.">
+<title>DIGITAL STORE — All Your Digital Needs In One Place</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div class="grain"></div><div class="cursor-glow"></div>
-<header class="nav">
-  <a class="brand" href="#top"><span class="brand-mark">DS</span><span>DIGITAL <b>STORE</b></span></a>
-  <nav><a href="#services">Services</a><a href="#about">About</a><a href="#why">Why Us</a><a href="#faq">FAQ</a><a class="nav-cta" href="#contact">Order Now ↗</a></nav>
-  <a class="mobile-wa" target="_blank" rel="noopener" href="https://wa.me/923198682932?text=Hi%20DIGITAL%20STORE%2C%20I%20want%20to%20place%20an%20order.">WA</a>
+<div class="noise"></div><div class="page-glow glow-a"></div><div class="page-glow glow-b"></div>
+<header class="nav" id="top">
+  <a class="brand" href="#top"><span class="brand-box">DS</span><span><b>DIGITAL</b><strong>STORE</strong><small>ALL YOUR DIGITAL NEEDS IN ONE PLACE</small></span></a>
+  <nav class="nav-links"><a href="#services">Services</a><a href="#about">About</a><a href="#why">Why Us</a><a href="#faq">FAQ</a></nav>
+  <a class="nav-wa" href="https://wa.me/923198682932" target="_blank" rel="noopener">WA <span>03198682932</span></a>
+  <button class="menu-btn" id="menuBtn" aria-label="Open menu">☰</button>
 </header>
-<main id="top">
+
+<main>
 <section class="hero">
- <div class="hero-bg"><span></span><span></span><span></span></div>
- <div class="hero-copy reveal">
-  <div class="eyebrow"><i></i> PREMIUM DIGITAL MARKETPLACE</div>
-  <h1>ALL YOUR<br><em>DIGITAL NEEDS</em><br>IN ONE PLACE.</h1>
-  <p class="hero-sub">Digital subscriptions, creative tools, AI platforms, entertainment plans and social-media services — organized clearly and ordered directly.</p>
-  <div class="hero-actions"><a class="btn primary" href="#services">EXPLORE SERVICES ↓</a><a class="btn ghost" target="_blank" rel="noopener" href="https://wa.me/923198682932?text=Hi%20DIGITAL%20STORE%2C%20I%20want%20to%20place%20an%20order.">WHATSAPP US ↗</a></div>
-  <div class="micro-proof"><span>01</span> CURATED SERVICES <b></b><span>02</span> DIRECT WHATSAPP ORDERING</div>
- </div>
- <div class="hero-visual reveal">
-   <div class="portrait-stage"><div class="portrait-ring r1"></div><div class="portrait-ring r2"></div><img src="portrait.png" alt="DIGITAL STORE founder portrait"><div class="portrait-label"><small>FOUNDER / DIGITAL STORE</small><strong>DIGITAL, MADE SIMPLE.</strong></div></div>
-   <div class="float-card fc-one"><b>PREMIUM</b><small>TOOLS & SERVICES</small></div><div class="float-card fc-two"><b>24/7</b><small>ORDER SUPPORT</small></div>
- </div>
+  <div class="hero-copy reveal">
+    <div class="pill"><span></span> PREMIUM DIGITAL MARKETPLACE</div>
+    <h1>ALL YOUR<br><em>DIGITAL NEEDS</em><br>IN ONE PLACE.</h1>
+    <p class="hero-sub">Accounts, creative tools, AI platforms, entertainment plans and digital services — presented simply, ordered directly.</p>
+    <div class="hero-actions"><a class="btn btn-gold" href="#services">EXPLORE SERVICES <span>↘</span></a><a class="btn btn-dark" href="https://wa.me/923198682932" target="_blank" rel="noopener">WHATSAPP US <span>↗</span></a></div>
+    <div class="trust-row"><div><b>01</b><span>FAST<br><small>DELIVERY</small></span></div><div><b>02</b><span>SECURE<br><small>PROCESS</small></span></div><div><b>03</b><span>FAIR<br><small>PRICES</small></span></div><div><b>04</b><span>24/7<br><small>SUPPORT</small></span></div></div>
+  </div>
+  <div class="hero-art reveal">
+    <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+    <div class="art-caption"><span>YOUR DIGITAL PARTNER</span><b>DIRECT<br>ORDERING</b></div>
+    <div class="portrait-wrap"><img src="portrait.png" alt="DIGITAL STORE founder portrait"></div>
+  </div>
 </section>
-<section class="ticker"><div>FAST DELIVERY</div><div>SECURE PROCESS</div><div>AFFORDABLE PRICES</div><div>24/7 SUPPORT</div><div>TRUSTED SERVICE</div><div>FAST DELIVERY</div></section>
-<section class="intro section-pad"><div class="section-kicker reveal">THE STORE</div><div class="intro-grid"><h2 class="reveal">Everything you need.<br><span>One clean destination.</span></h2><p class="reveal">DIGITAL STORE brings digital subscriptions, creative software, AI tools, entertainment plans and social-media services into one organized catalog. Choose a category, explore its visual experience, check the exact service and price, then order directly on WhatsApp.</p></div></section>
-<section id="services" class="services section-pad">
- <div class="section-head reveal"><div><div class="section-kicker">FULL CATALOG</div><h2>Explore every <span>service.</span></h2></div><div class="catalog-note">Exact current catalog values.<br>Future prices can be edited in <code>catalog.js</code>.</div></div>
- <div class="service-rule reveal"><div><strong>01</strong><span>OPEN THE CATEGORY EXPERIENCE</span></div><div><strong>02</strong><span>SEE THE VISUAL / ANIMATION</span></div><div><strong>03</strong><span>CHOOSE YOUR SERVICE & ORDER</span></div></div>
- <div id="catalog" class="catalog-grid"></div>
+
+<section class="ticker"><div>CAPCUT <i>•</i> CANVA <i>•</i> CHATGPT <i>•</i> GEMINI <i>•</i> YOUTUBE <i>•</i> NETFLIX <i>•</i> TIKTOK <i>•</i> LIKEE <i>•</i> SOCIAL GROWTH <i>•</i></div></section>
+
+<section class="section intro" id="about">
+  <div class="section-label">ABOUT DIGITAL STORE</div>
+  <div class="intro-grid"><div><h2>A STORE BUILT AROUND <em>YOUR DIGITAL WORK.</em></h2></div>
+  <div><p>DIGITAL STORE brings everyday digital tools, accounts, entertainment plans and growth services into one simple catalog. Choose a category, see the exact price, and send your order directly on WhatsApp.</p><p class="muted">Clear catalog. Large readable pricing. Direct ordering.</p></div></div>
 </section>
-<section id="about" class="founder section-pad"><div class="founder-visual reveal"><div class="founder-circle"><img src="portrait.png" alt="DIGITAL STORE founder"></div></div><div class="founder-copy reveal"><div class="section-kicker">ABOUT DIGITAL STORE</div><h2>Built around <span>clarity.</span></h2><p>DIGITAL STORE is a premium digital-services storefront designed to keep digital tools, subscriptions, growth services and creative resources in one place. The experience is simple: clear categories, visible pricing and direct ordering.</p><div class="founder-points"><div><b>01</b><span>ORGANIZED CATALOG</span></div><div><b>02</b><span>CLEAR PRICING</span></div><div><b>03</b><span>DIRECT WHATSAPP ORDERING</span></div></div></div></section>
-<section class="story section-pad"><div class="story-visual reveal"><div class="story-screen"><div class="screen-grid"></div><span>DS / DIGITAL STORE</span><strong>ONE PLACE.<br>ENDLESS DIGITAL<br>POSSIBILITIES.</strong><i></i></div></div><div class="story-copy reveal"><div class="section-kicker">THE EXPERIENCE</div><h2>Every category gets its own <span>visual identity.</span></h2><p>Instead of showing a flat list immediately, each category opens with a matching animated visual — then the complete service list and exact prices appear underneath.</p><div class="stats"><div><b>08</b><small>CATEGORIES</small></div><div><b>70+</b><small>LISTED ITEMS</small></div><div><b>01</b><small>ORDER CHANNEL</small></div></div></div></section>
-<section id="why" class="why section-pad"><div class="section-head reveal"><div><div class="section-kicker">WHY DIGITAL STORE</div><h2>Simple on the surface.<br><span>Serious underneath.</span></h2></div></div><div class="why-grid"><article class="why-card reveal"><div>01</div><h3>ONE DESTINATION</h3><p>Multiple digital categories organized in one premium storefront.</p></article><article class="why-card reveal"><div>02</div><h3>CLEAR PRICING</h3><p>Every listed service shows its current price and duration where applicable.</p></article><article class="why-card reveal"><div>03</div><h3>DIRECT ORDERING</h3><p>Every order button opens WhatsApp with the selected service name already written.</p></article><article class="why-card reveal"><div>04</div><h3>EASY TO UPDATE</h3><p>Catalog data is kept separately so prices can be updated without rebuilding the design.</p></article></div></section>
-<section id="faq" class="faq section-pad"><div class="section-kicker reveal">FAQ</div><h2 class="reveal">Questions, answered.</h2><div class="faq-list"><details><summary>How do I order a service?<span>+</span></summary><p>Open a category, choose a service and tap ORDER NOW. WhatsApp opens with the service name pre-filled.</p></details><details><summary>Can prices be changed later?<span>+</span></summary><p>Yes. Service data and prices are stored in <code>catalog.js</code>, separate from the visual design.</p></details><details><summary>Is the website mobile friendly?<span>+</span></summary><p>Yes. The catalog, animated category experiences, navigation and order buttons adapt to phone, tablet and desktop screens.</p></details></div></section>
-<section id="contact" class="contact section-pad"><div class="contact-box reveal"><div><div class="section-kicker">READY WHEN YOU ARE</div><h2>Choose your service.<br><span>Order directly.</span></h2><p>WhatsApp: <strong>03198682932</strong></p></div><a class="btn whatsapp" target="_blank" rel="noopener" href="https://wa.me/923198682932?text=Hi%20DIGITAL%20STORE%2C%20I%20want%20to%20place%20an%20order.">ORDER ON WHATSAPP ↗</a></div></section>
+
+<section class="section services" id="services">
+  <div class="services-head"><div><div class="section-label">EXPLORE OUR SERVICES</div><h2>CHOOSE YOUR <em>CATEGORY</em></h2></div><p>Each category opens into its own visual experience and complete price list.</p></div>
+  <div class="category-tabs"><button class="active" data-target="cat-all">ALL</button>
+  <button data-target="cat-01">TIKTOK</button><button data-target="cat-02">CREATIVE TOOLS</button><button data-target="cat-03">AI / PRODUCTIVITY</button><button data-target="cat-04">ENTERTAINMENT</button><button data-target="cat-05">SOFTWARE</button><button data-target="cat-06">LIKEE</button><button data-target="cat-07">SOCIAL GROWTH</button>
+  </div>
+  <div class="category-grid">
+      <section class="category-panel tone-pink" id="cat-01" data-category="TikTok Services">
+        <div class="category-top">
+          <div class="category-index">01</div>
+          <div>
+            <div class="eyebrow">TIKTOK</div>
+            <h3>TikTok Services</h3>
+            <p>Followers • Coins • Accounts</p>
+          </div>
+          <div class="category-mark">✦</div>
+        </div>
+        <div class="category-visual">
+          <div class="visual-grid"></div><div class="visual-orb"></div>
+          <div class="visual-label"><span>LIVE CATALOG</span><b>05</b><small>OPTIONS</small></div>
+          <div class="scan-line"></div>
+        </div>
+        <div class="service-list">
+          <article class="service-row">
+            <div class="service-main">
+              <span class="service-dot"></span>
+              <div><h4>TikTok Account Unfreeze</h4><p>Permanent Service</p></div>
+            </div>
+            <div class="service-buy">
+              <strong>Rs 970</strong>
+              <a class="mini-order" href="https://wa.me/923198682932?text=Hello%20DIGITAL%20STORE%2C%20I%20want%20to%20order%3A%20TikTok%20Account%20Unfreeze%20%E2%80%94%20Permanent%20Service%20%E2%80%94%20Rs%20970" target="_blank" rel="noopener">ORDER →</a>
+            </div>
+          </article>
+          <article class="service-row">
+            <div class="service-main">
+              <span class="service-dot"></span>
+              <div><h4>TikTok UK Account</h4><p>Fresh UK Account</p></div>
+            </div>
+            <div class="service-buy">
+              <strong>Rs 450</strong>
+              <a class="mini-order" href="https://wa.me/923198682932?text=Hello%20DIGITAL%20STORE%2C%20I%20want%20to%20order%3A%20TikTok%20UK%20Account%20%E2%80%94%20Fresh%20UK%20Account%20%E2%80%94%20Rs%20450" target="_blank" rel="noopener">ORDER →</a>
+            </div>
+          </article>
+          <article class="service-row">
+            <div class="service-main">
+              <span class="service-dot"></span>
+              <div><h4>TikTok Coins (300)</h4><p>Instant Delivery</p></div>
+            </div>
+            <div class="service-buy">
+              <strong>Rs 1,216.5</strong>
+              <a class="mini-order" href="https://wa.me/923198682932?text=Hello%20DIGITAL%20STORE%2C%20I%20want%20to%20order%3A%20TikTok%20Coins%20%28300%29%20%E2%80%94%20Instant%20Delivery%20%E2%80%94%20Rs%201%2C216.5" target="_blank" rel="noopener">ORDER →</a>
+            </div>
+          </article>
+          <article class="service-row">
+            <div class="service-main">
+              <span class="service-dot"></span>
+              <div><h4>TikTok Coins (500)</h4><p>Instant Delivery</p></div>
+            </div>
+            <div class="service-buy">
+              <strong>Rs 1,883.5</strong>
+              <a class="mini-order" href="https://wa.me/923198682932?text=Hello%20DIGITAL%20STORE%2C%20I%20want%20to%20order%3A%20TikTok%20Coins%20%28500%29%20%E2%80%94%20Instant%20Delivery%20%E2%80%94%20Rs%201%2C883.5" target="_blank" rel="noopener">ORDER →</a>
+            </div>
+          </article>
+          <article class="service-row">
+            <div class="service-main">
+              <span class="service-dot"></span>
+              <div><h4>TikTok Coins (1000)</h4><p>Instant Delivery</p></div>
+            </div>
+            <div class="service-buy">
+              <strong>Rs 3,580</strong>
+              <a class="mini-order" href="https://wa.me/923198682932?text=Hello%20DIGITAL%20STORE%2C%20I%20want%20to%20order%3A%20TikTok%20Coins%20%281000%29%20%E2%80%94%20Instant%20Delivery%20%E2%80%94%20Rs%203%2C580" target="_blank" rel="noopener">ORDER →</a>
+            </div>
+          </article></div>
+      </section>
+      <section class="category-panel tone-orange" id="cat-02" data-category="Video Editor &amp; Creative Tools">
+        <div class="category-top">
+          <div class="category-index">02</div>
+          <div>
+            <div class="eyebrow">CREATIVE TOOLS</div>
+            <h3>Video Editor &amp; Creative Tools</h3>
+            <p>CapCut • Canva • Editing</p>
+          </div>
+          <div class="category-mark">◈</div>
+        </div>
+        <div class="category-visual">
+          <div class="visual-grid"></div><div class="visual-orb"></div>
+          <div class="visual-label"><span>LIVE CATALOG</span><b>09</b><small>OPTIONS</small></div>
+          <div class="scan-line"></div>
+        </div>
+        <div class="service-list">
+          <article class="service-row">
+            <div class="service-main">
+              <span class="service-dot"></span>
+              <div><h4>CapCut Pro</h4><p>1 Account / 1 Month</p></div>
+            </div>
+            <div class="service-buy">
+              <strong>Rs 350</strong>
+              <a class="mini-order" href="https://wa.me/923198682932?text=Hello%20DIGITAL%20STORE%2C%20I%20want%20to%20order%3A%20CapCut%20Pro%20%E2%80%94%201%20Account%20/%201%20Month%20%E2%80%94%20Rs%20350" target="_blank" rel="noopener">ORDER →</a>
+            </div>
+          </article>
+          <article class="service-row">
+            <div class="service-main">
+              <span class="service-dot"></span>
+              <div><h4>CapCut Pro</h4><p>4 Accounts / 1 Month</p></div>
+            </div>
+            <div class="service-buy">
+              <strong>Rs 825</strong>
+              <a class="mini-order" href="https://wa.me/923198682932?text=Hello%20DIGITAL%20STORE%2C%20I%20want%20to%20order%3A%20CapCut%20Pro%20%E2%80%94%204%20Accounts%20/%201%20Month%20%E2%80%94%20Rs%20825" target="_blank" rel="noopener">ORDER →</a>
+            </div>
+          </article>
+          <article class="service-row">
+            <div class="service-main">
+              <span class="service-dot"></span>
+              <div><h4>CapCut Pro</h4><p>5 Accounts / 1 Month</p></div>
+            </div>
+            <div class="service-buy">
+              <strong>Rs 970</strong>
+              <a class="mini-order" href="https://wa.me/923198682932?text=Hello%20DIGITAL%20STORE%2C%20I%20want%20to%20order%3A%20CapCut%20Pro%20%E2%80%94%205%20Accounts%20/%201%20Month%20%E2%80%94%20Rs%20970" target="_blank" rel="noopener">ORDER →</a>
+            </div>
+          </article>
+          <article class="service-row">
+            <div class="service-main">
+              <span class="service-dot"></span>
+              <div><h4>CapCut Pro</h4><p>10 Accounts / 1 Month</p></div>
+            </div>
+            <div class="service-buy">
+              <strong>Rs 2,130</strong>
+              <a class="mini-order" href="https://wa.me/923198682932?text=Hello%20DIGITAL%20STORE%2C%20I%20want%20to%20order%3A%20CapCut%20Pro%20%E2%80%94%2010%20Accounts%20/%201%20Month%20%E2%80%94%20Rs%202%2C130" target="_blank" rel="noopener">ORDER →</a>
+            </div>
+          </article>
+          <article class="service-row">
+            <div class="service-main">
+              <span class="service-dot"></span>
+              <div><h4>CapCut Pro</h4><p>180 Days / 6 Months</p></div>
+            </div>
+            <div class="service-buy">
+              <strong>Rs 680</strong>
+              <a class="mini-order" href="https://wa.me/923198682932?text=Hello%20DIGITAL%20STORE%2C%20I%20want%20to%20order%3A%20CapCut%20Pro%20%E2%80%94%20180%20Days%20/%206%20Months%20%E2%80%94%20Rs%20680" target="_blank" rel="noopener">ORDER →</a>
+            </div>
+          </article>
+          <article class="service-row">
+            <div class="service-main">
+              <span class="service-dot"></span>
+              <div><h4>CapCut Pro</h4><p>Own Email / 1 Month</p></div>
+            </div>
+            <div class="service-buy">
+              <strong>Rs 535</strong>
+              <a class="mini-order" href="https://wa.me/923198682932?text=Hello%20DIGITAL%20STORE%2C%20I%20want%20to%20order%3A%20CapCut%20Pro%20%E2%80%94%20Own%20Email%20/%201%20Month%20%E2%80%94%20Rs%20535" target="_blank" rel="noopener">ORDER →</a>
+            </div>
+          </article>
+          <article class="service-row">
+            <div class="service-main">
+              <span class="service-dot"></span>
+              <div><h4>Canva Account</h4><p>1 Month</p></div>
+            </div>
+            <div class="service-buy">
+              <strong>Rs 680</strong>
+              <a class="mini-order" href="https://wa.me/923198682932?text=Hello%20DIGITAL%20STORE%2C%20I%20want%20to%20order%3A%20Canva%20Account%20%E2%80%94%201%20Month%20%E2%80%94%20Rs%20680" target="_blank" rel="noopener">ORDER →</a>
+            </div>
+          </article>
+          <article class="service-row">
+            <div class="service-main">
+              <span class="service-dot"></span>
+              <div><h4>Canva Pro Lifetime</h4><p>Option 1</p></div>
+            </div>
+            <div class="service-buy">
+              <strong>Rs 250</strong>
+              <a class="mini-order" href="https://wa.me/923198682932?text=Hello%20DIGITAL%20STORE%2C%20I%20want%20to%20order%3A%20Canva%20Pro%20Lifetime%20%E2%80%94%20Option%201%20%E2%80%94%20Rs%20250" target="_blank" rel="noopener">ORDER →</a>
+            </div>
+          </article>
+          <article class="service-row">
+            <div class="service-main">
+              <span class="service-dot"></span>
+              <div><h4>Canva Pro Lifetime</h4><p>Option 2</p></div>
+            </div>
+            <div class="service-buy">
+              <strong>Rs 350</strong>
+              <a class="mini-order" href="https://wa.me/923198682932?text=Hello%20DIGITAL%20STORE%2C%20I%20want%20to%20order%3A%20Canva%20Pro%20Lifetime%20%E2%80%94%20Option%202%20%E2%80%94%20Rs%20350" target="_blank" rel="noopener">ORDER →</a>
+            </div>
+          </article></div>
+      </section>
+      <section class="category-panel tone-blue" id="cat-03" data-category="AI &amp; Productivity Tools">
+        <div class="category-top">
+          <div class="category-index">03</div>
+          <div>
+            <div class="eyebrow">AI / PRODUCTIVITY</div>
+            <h3>AI &amp; Productivity Tools</h3>
+            <p>ChatGPT • Gemini • Workflow</p>
+          </div>
+          <div class="category-mark">✧</div>
+        </div>
+        <div class="category-visual">
+          <div class="visual-grid"></div><div class="visual-orb"></div>
+          <div class="visual-label"><span>LIVE CATALOG</span><b>06</b><small>OPTIONS</small></div>
+          <div class="scan-line"></div>
+        </div>
+        <div class="service-list">
+          <article class="service-row">
+            <div class="service-main">
+              <span class="service-dot"></span>
+              <div><h4>ChatGPT Plus</h4><p>Shared / 1 Month</p></div>
+            </div>
+            <div class="service-buy">
+              <strong>Rs 400</strong>
+              <a class="mini-order" href="https://wa.me/923198682932?text=Hello%20DIGITAL%20STORE%2C%20I%20want%20to%20order%3A%20ChatGPT%20Plus%20%E2%80%94%20Shared%20/%201%20Month%20%E2%80%94%20Rs%20400" target="_blank" rel="noopener">ORDER →</a>
+            </div>
+          </article>
+          <article class="service-row">
+            <div class="service-main">
+              <span class="service-dot"></span>
+              <div><h4>ChatGPT Plus</h4><p>Semi Private / 1 Month</p></div>
+            </div>
+            <div class="service-buy">
+              <strong>Rs 535</strong>
+              <a class="mini-order" href="https://wa.me/923198682932?text=Hello%20DIGITAL%20STORE%2C%20I%20want%20to%20order%3A%20ChatGPT%20Plus%20%E2%80%94%20Semi%20Private%20/%201%20Month%20%E2%80%94%20Rs%20535" target="_blank" rel="noopener">ORDER →</a>
+            </div>
+          </article>
+          <article class="service-row">
+            <div class="service-main">
+              <span class="service-dot"></span>
+              <div><h4>ChatGPT Plus</h4><p>Private / 1 Month</p></div>
+            </div>
+            <div class="service-buy">
+              <strong>Rs 2,420</strong>
+              <a class="mini-order" href="https://wa.me/923198682932?text=Hello%20DIGITAL%20STORE%2C%20I%20want%20to%20order%3A%20ChatGPT%20Plus%20%E2%80%94%20Private%20/%201%20Month%20%E2%80%94%20Rs%202%2C420" target="_blank" rel="noopener">ORDER →</a>
+            </div>
+          </article>
+          <article class="service-row">
+            <div class="service-main">
+              <span class="service-dot"></span>
+              <div><h4>ChatGPT Plus</h4><p>Own Account / 1 Month</p></div>
+            </div>
+            <div class="service-buy">
+              <strong>Rs 3,000</strong>
+              <a class="mini-order" href="https://wa.me/923198682932?text=Hello%20DIGITAL%20STORE%2C%20I%20want%20to%20order%3A%20ChatGPT%20Plus%20%E2%80%94%20Own%20Account%20/%201%20Month%20%E2%80%94%20Rs%203%2C000" target="_blank" rel="noopener">ORDER →</a>
+            </div>
+          </article>
+          <article class="service-row">
+            <div class="service-main">
+              <span class="service-dot"></span>
+              <div><h4>Gemini</h4><p>18 Months / 5 Users</p></div>
+            </div>
+            <div class="service-buy">
+              <strong>Rs 497.3</strong>
+              <a class="mini-order" href="https://wa.me/923198682932?text=Hello%20DIGITAL%20STORE%2C%20I%20want%20to%20order%3A%20Gemini%20%E2%80%94%2018%20Months%20/%205%20Users%20%E2%80%94%20Rs%20497.3" target="_blank" rel="noopener">ORDER →</a>
+            </div>
+          </article>
+          <article class="service-row">
+            <div class="service-main">
+              <span class="service-dot"></span>
+              <div><h4>Gemini</h4><p>18 Months / 5 Accounts</p></div>
+            </div>
+            <div class="service-buy">
+              <strong>Rs 1,550</strong>
+              <a class="mini-order" href="https://wa.me/923198682932?text=Hello%20DIGITAL%20STORE%2C%20I%20want%20to%20order%3A%20Gemini%20%E2%80%94%2018%20Months%20/%205%20Accounts%20%E2%80%94%20Rs%201%2C550" target="_blank" rel="noopener">ORDER →</a>
+            </div>
+          </article></div>
+      </section>
+      <section class="category-panel tone-red" id="cat-04" data-category="Entertainment &amp; VPN">
+        <div class="category-top">
+          <div class="category-index">04</div>
+          <div>
+            <div class="eyebrow">ENTERTAINMENT</div>
+            <h3>Entertainment &amp; VPN</h3>
+            <p>Streaming • VPN • Access</p>
+          </div>
+          <div class="category-mark">◉</div>
+        </div>
+        <div class="category-visual">
+          <div class="visual-grid"></div><div class="visual-orb"></div>
+          <div class="visual-label"><span>LIVE CATALOG</span><b>05</b><small>OPTIONS</small></div>
+          <div class="scan-line"></div>
+        </div>
+        <div class="service-list">
+          <article class="service-row">
+            <div class="service-main">
+              <span class="service-dot"></span>
+              <div><h4>YouTube Premium</h4><p>30 Days</p></div>
+            </div>
+            <div class="service-buy">
+              <strong>Rs 419</strong>
+              <a class="mini-order" href="https://wa.me/923198682932?text=Hello%20DIGITAL%20STORE%2C%20I%20want%20to%20order%3A%20YouTube%20Premium%20%E2%80%94%2030%20Days%20%E2%80%94%20Rs%20419" target="_blank" rel="noopener">ORDER →</a>
+            </div>
+          </article>
+          <article class="service-row">
+            <div class="service-main">
+              <span class="service-dot"></span>
+              <div><h4>Netflix</h4><p>Single Screen / 1 Month</p></div>
+            </div>
+            <div class="service-buy">
+              <strong>Rs 390</strong>
+              <a class="mini-order" href="https://wa.me/923198682932?text=Hello%20DIGITAL%20STORE%2C%20I%20want%20to%20order%3A%20Netflix%20%E2%80%94%20Single%20Screen%20/%201%20Month%20%E2%80%94%20Rs%20390" target="_blank" rel="noopener">ORDER →</a>
+            </div>
+          </article>
+          <article class="service-row">
+            <div class="service-main">
+              <span class="service-dot"></span>
+              <div><h4>Netflix</h4><p>Private Single Screen / 1 Month</p></div>
+            </div>
+            <div class="service-buy">
+              <strong>Rs 477</strong>
+              <a class="mini-order" href="https://wa.me/923198682932?text=Hello%20DIGITAL%20STORE%2C%20I%20want%20to%20order%3A%20Netflix%20%E2%80%94%20Private%20Single%20Screen%20/%201%20Month%20%E2%80%94%20Rs%20477" target="_blank" rel="noopener">ORDER →</a>
+            </div>
+          </article>
+          <article class="service-row">
+            <div class="service-main">
+              <span class="service-dot"></span>
+              <div><h4>Netflix</h4><p>5 Screens / 1 Month</p></div>
+            </div>
+            <div class="service-buy">
+              <strong>Rs 1,405</strong>
+              <a class="mini-order" href="https://wa.me/923198682932?text=Hello%20DIGITAL%20STORE%2C%20I%20want%20to%20order%3A%20Netflix%20%E2%80%94%205%20Screens%20/%201%20Month%20%E2%80%94%20Rs%201%2C405" target="_blank" rel="noopener">ORDER →</a>
+            </div>
+          </article>
+          <article class="service-row">
+            <div class="service-main">
+              <span class="service-dot"></span>
+              <div><h4>NordVPN</h4><p>3 Months</p></div>
+            </div>
+            <div class="service-buy">
+              <strong>Rs 332</strong>
+              <a class="mini-order" href="https://wa.me/923198682932?text=Hello%20DIGITAL%20STORE%2C%20I%20want%20to%20order%3A%20NordVPN%20%E2%80%94%203%20Months%20%E2%80%94%20Rs%20332" target="_blank" rel="noopener">ORDER →</a>
+            </div>
+          </article></div>
+      </section>
+      <section class="category-panel tone-violet" id="cat-05" data-category="Software &amp; Digital Tools">
+        <div class="category-top">
+          <div class="category-index">05</div>
+          <div>
+            <div class="eyebrow">SOFTWARE</div>
+            <h3>Software &amp; Digital Tools</h3>
+            <p>Keys • Themes • Digital Tools</p>
+          </div>
+          <div class="category-mark">⌘</div>
+        </div>
+        <div class="category-visual">
+          <div class="visual-grid"></div><div class="visual-orb"></div>
+          <div class="visual-label"><span>LIVE CATALOG</span><b>05</b><small>OPTIONS</small></div>
+          <div class="scan-line"></div>
+        </div>
+        <div class="service-list">
+          <article class="service-row">
+            <div class="service-main">
+              <span class="service-dot"></span>
+              <div><h4>Windows 10/11 Activation Key</h4><p>Lifetime</p></div>
+            </div>
+            <div class="service-buy">
+              <strong>Rs 400</strong>
+              <a class="mini-order" href="https://wa.me/923198682932?text=Hello%20DIGITAL%20STORE%2C%20I%20want%20to%20order%3A%20Windows%2010/11%20Activation%20Key%20%E2%80%94%20Lifetime%20%E2%80%94%20Rs%20400" target="_blank" rel="noopener">ORDER →</a>
+            </div>
+          </article>
+          <article class="service-row">
+            <div class="service-main">
+              <span class="service-dot"></span>
+              <div><h4>USA Debit Card</h4><p>1 Month</p></div>
+            </div>
+            <div class="service-buy">
+              <strong>Rs 1,550</strong>
+              <a class="mini-order" href="https://wa.me/923198682932?text=Hello%20DIGITAL%20STORE%2C%20I%20want%20to%20order%3A%20USA%20Debit%20Card%20%E2%80%94%201%20Month%20%E2%80%94%20Rs%201%2C550" target="_blank" rel="noopener">ORDER →</a>
+            </div>
+          </article>
+          <article class="service-row">
+            <div class="service-main">
+              <span class="service-dot"></span>
+              <div><h4>Top 200 Shopify Themes</h4><p>Lifetime Access</p></div>
+            </div>
+            <div class="service-buy">
+              <strong>Rs 199.76</strong>
+              <a class="mini-order" href="https://wa.me/923198682932?text=Hello%20DIGITAL%20STORE%2C%20I%20want%20to%20order%3A%20Top%20200%20Shopify%20Themes%20%E2%80%94%20Lifetime%20Access%20%E2%80%94%20Rs%20199.76" target="_blank" rel="noopener">ORDER →</a>
+            </div>
+          </article>
+          <article class="service-row">
+            <div class="service-main">
+              <span class="service-dot"></span>
+              <div><h4>YouTube CPM Software</h4><p>Lifetime Access</p></div>
+            </div>
+            <div class="service-buy">
+              <strong>Rs 593</strong>
+              <a class="mini-order" href="https://wa.me/923198682932?text=Hello%20DIGITAL%20STORE%2C%20I%20want%20to%20order%3A%20YouTube%20CPM%20Software%20%E2%80%94%20Lifetime%20Access%20%E2%80%94%20Rs%20593" target="_blank" rel="noopener">ORDER →</a>
+            </div>
+          </article>
+          <article class="service-row">
+            <div class="service-main">
+              <span class="service-dot"></span>
+              <div><h4>IDM Pakistan Complete Course</h4><p>Lifetime Access</p></div>
+            </div>
+            <div class="service-buy">
+              <strong>Rs 600</strong>
+              <a class="mini-order" href="https://wa.me/923198682932?text=Hello%20DIGITAL%20STORE%2C%20I%20want%20to%20order%3A%20IDM%20Pakistan%20Complete%20Course%20%E2%80%94%20Lifetime%20Access%20%E2%80%94%20Rs%20600" target="_blank" rel="noopener">ORDER →</a>
+            </div>
+          </article></div>
+      </section>
+      <section class="category-panel tone-lime" id="cat-06" data-category="Likee Services">
+        <div class="category-top">
+          <div class="category-index">06</div>
+          <div>
+            <div class="eyebrow">LIKEE</div>
+            <h3>Likee Services</h3>
+            <p>Likes • Views • Reposts • Followers</p>
+          </div>
+          <div class="category-mark">♥</div>
+        </div>
+        <div class="category-visual">
+          <div class="visual-grid"></div><div class="visual-orb"></div>
+          <div class="visual-label"><span>LIVE CATALOG</span><b>08</b><small>OPTIONS</small></div>
+          <div class="scan-line"></div>
+        </div>
+        <div class="service-list">
+          <article class="service-row">
+            <div class="service-main">
+              <span class="service-dot"></span>
+              <div><h4>Likee Likes</h4><p>10K+/Day — Per 1000</p></div>
+            </div>
+            <div class="service-buy">
+              <strong>Rs 917.075</strong>
+              <a class="mini-order" href="https://wa.me/923198682932?text=Hello%20DIGITAL%20STORE%2C%20I%20want%20to%20order%3A%20Likee%20Likes%20%E2%80%94%2010K%2B/Day%20%E2%80%94%20Per%201000%20%E2%80%94%20Rs%20917.075" target="_blank" rel="noopener">ORDER →</a>
+            </div>
+          </article>
+          <article class="service-row">
+            <div class="service-main">
+              <span class="service-dot"></span>
+              <div><h4>Likee Likes</h4><p>1K+/Day — Per 1000</p></div>
+            </div>
+            <div class="service-buy">
+              <strong>Rs 450.175</strong>
+              <a class="mini-order" href="https://wa.me/923198682932?text=Hello%20DIGITAL%20STORE%2C%20I%20want%20to%20order%3A%20Likee%20Likes%20%E2%80%94%201K%2B/Day%20%E2%80%94%20Per%201000%20%E2%80%94%20Rs%20450.175" target="_blank" rel="noopener">ORDER →</a>
+            </div>
+          </article>
+          <article class="service-row">
+            <div class="service-main">
+              <span class="service-dot"></span>
+              <div><h4>Likee Views</h4><p>1K+/Day — Per 1000</p></div>
+            </div>
+            <div class="service-buy">
+              <strong>Rs 633.6</strong>
+              <a class="mini-order" href="https://wa.me/923198682932?text=Hello%20DIGITAL%20STORE%2C%20I%20want%20to%20order%3A%20Likee%20Views%20%E2%80%94%201K%2B/Day%20%E2%80%94%20Per%201000%20%E2%80%94%20Rs%20633.6" target="_blank" rel="noopener">ORDER →</a>
+            </div>
+          </article>
+          <article class="service-row">
+            <div class="service-main">
+              <span class="service-dot"></span>
+              <div><h4>Likee Views</h4><p>500+/Day — Per 1000</p></div>
+            </div>
+            <div class="service-buy">
+              <strong>Rs 440.17</strong>
+              <a class="mini-order" href="https://wa.me/923198682932?text=Hello%20DIGITAL%20STORE%2C%20I%20want%20to%20order%3A%20Likee%20Views%20%E2%80%94%20500%2B/Day%20%E2%80%94%20Per%201000%20%E2%80%94%20Rs%20440.17" target="_blank" rel="noopener">ORDER →</a>
+            </div>
+          </article>
+          <article class="service-row">
+            <div class="service-main">
+              <span class="service-dot"></span>
+              <div><h4>Likee Reposts</h4><p>500+/Day — Per 1000</p></div>
+            </div>
+            <div class="service-buy">
+              <strong>Rs 850.275</strong>
+              <a class="mini-order" href="https://wa.me/923198682932?text=Hello%20DIGITAL%20STORE%2C%20I%20want%20to%20order%3A%20Likee%20Reposts%20%E2%80%94%20500%2B/Day%20%E2%80%94%20Per%201000%20%E2%80%94%20Rs%20850.275" target="_blank" rel="noopener">ORDER →</a>
+            </div>
+          </article>
+          <article class="service-row">
+            <div class="service-main">
+              <span class="service-dot"></span>
+              <div><h4>Likee Reposts</h4><p>10K+/Day — Per 1000</p></div>
+            </div>
+            <div class="service-buy">
+              <strong>Rs 456.845</strong>
+              <a class="mini-order" href="https://wa.me/923198682932?text=Hello%20DIGITAL%20STORE%2C%20I%20want%20to%20order%3A%20Likee%20Reposts%20%E2%80%94%2010K%2B/Day%20%E2%80%94%20Per%201000%20%E2%80%94%20Rs%20456.845" target="_blank" rel="noopener">ORDER →</a>
+            </div>
+          </article>
+          <article class="service-row">
+            <div class="service-main">
+              <span class="service-dot"></span>
+              <div><h4>Likee Followers</h4><p>10K+/Day — Per 1000</p></div>
+            </div>
+            <div class="service-buy">
+              <strong>Rs 2,281.2588</strong>
+              <a class="mini-order" href="https://wa.me/923198682932?text=Hello%20DIGITAL%20STORE%2C%20I%20want%20to%20order%3A%20Likee%20Followers%20%E2%80%94%2010K%2B/Day%20%E2%80%94%20Per%201000%20%E2%80%94%20Rs%202%2C281.2588" target="_blank" rel="noopener">ORDER →</a>
+            </div>
+          </article>
+          <article class="service-row">
+            <div class="service-main">
+              <span class="service-dot"></span>
+              <div><h4>Likee Followers</h4><p>500+/Day — Per 1000</p></div>
+            </div>
+            <div class="service-buy">
+              <strong>Rs 1,127.18</strong>
+              <a class="mini-order" href="https://wa.me/923198682932?text=Hello%20DIGITAL%20STORE%2C%20I%20want%20to%20order%3A%20Likee%20Followers%20%E2%80%94%20500%2B/Day%20%E2%80%94%20Per%201000%20%E2%80%94%20Rs%201%2C127.18" target="_blank" rel="noopener">ORDER →</a>
+            </div>
+          </article></div>
+      </section>
+      <section class="category-panel tone-gold" id="cat-07" data-category="Social Media Growth">
+        <div class="category-top">
+          <div class="category-index">07</div>
+          <div>
+            <div class="eyebrow">SOCIAL GROWTH</div>
+            <h3>Social Media Growth</h3>
+            <p>Instagram • TikTok • YouTube • More</p>
+          </div>
+          <div class="category-mark">↗</div>
+        </div>
+        <div class="category-visual">
+          <div class="visual-grid"></div><div class="visual-orb"></div>
+          <div class="visual-label"><span>LIVE CATALOG</span><b>26</b><small>OPTIONS</small></div>
+          <div class="scan-line"></div>
+        </div>
+        <div class="service-list">
+          <article class="service-row">
+            <div class="service-main">
+              <span class="service-dot"></span>
+              <div><h4>Instagram Followers</h4><p>1K</p></div>
+            </div>
+            <div class="service-buy">
+              <strong>Rs 3,000</strong>
+              <a class="mini-order" href="https://wa.me/923198682932?text=Hello%20DIGITAL%20STORE%2C%20I%20want%20to%20order%3A%20Instagram%20Followers%20%E2%80%94%201K%20%E2%80%94%20Rs%203%2C000" target="_blank" rel="noopener">ORDER →</a>
+            </div>
+          </article>
+          <article class="service-row">
+            <div class="service-main">
+              <span class="service-dot"></span>
+              <div><h4>Instagram Likes</h4><p>1K</p></div>
+            </div>
+            <div class="service-buy">
+              <strong>Rs 200</strong>
+              <a class="mini-order" href="https://wa.me/923198682932?text=Hello%20DIGITAL%20STORE%2C%20I%20want%20to%20order%3A%20Instagram%20Likes%20%E2%80%94%201K%20%E2%80%94%20Rs%20200" target="_blank" rel="noopener">ORDER →</a>
+            </div>
+          </article>
+          <article class="service-row">
+            <div class="service-main">
+              <span class="service-dot"></span>
+              <div><h4>Instagram Comments</h4><p>1K</p></div>
+            </div>
+            <div class="service-buy">
+              <strong>Rs 300</strong>
+              <a class="mini-order" href="https://wa.me/923198682932?text=Hello%20DIGITAL%20STORE%2C%20I%20want%20to%20order%3A%20Instagram%20Comments%20%E2%80%94%201K%20%E2%80%94%20Rs%20300" target="_blank" rel="noopener">ORDER →</a>
+            </div>
+          </article>
+          <article class="service-row">
+            <div class="service-main">
+              <span class="service-dot"></span>
+              <div><h4>Instagram Reels Views</h4><p>50K</p></div>
+            </div>
+            <div class="service-buy">
+              <strong>Rs 500</strong>
+              <a class="mini-order" href="https://wa.me/923198682932?text=Hello%20DIGITAL%20STORE%2C%20I%20want%20to%20order%3A%20Instagram%20Reels%20Views%20%E2%80%94%2050K%20%E2%80%94%20Rs%20500" target="_blank" rel="noopener">ORDER →</a>
+            </div>
+          </article>
+          <article class="service-row">
+            <div class="service-main">
+              <span class="service-dot"></span>
+              <div><h4>TikTok Followers</h4><p>1K</p></div>
+            </div>
+            <div class="service-buy">
+              <strong>Rs 1,200</strong>
+              <a class="mini-order" href="https://wa.me/923198682932?text=Hello%20DIGITAL%20STORE%2C%20I%20want%20to%20order%3A%20TikTok%20Followers%20%E2%80%94%201K%20%E2%80%94%20Rs%201%2C200" target="_blank" rel="noopener">ORDER →</a>
+            </div>
+          </article>
+          <article class="service-row">
+            <div class="service-main">
+              <span class="service-dot"></span>
+              <div><h4>TikTok Likes</h4><p>1K</p></div>
+            </div>
+            <div class="service-buy">
+              <strong>Rs 350</strong>
+              <a class="mini-order" href="https://wa.me/923198682932?text=Hello%20DIGITAL%20STORE%2C%20I%20want%20to%20order%3A%20TikTok%20Likes%20%E2%80%94%201K%20%E2%80%94%20Rs%20350" target="_blank" rel="noopener">ORDER →</a>
+            </div>
+          </article>
+          <article class="service-row">
+            <div class="service-main">
+              <span class="service-dot"></span>
+              <div><h4>TikTok Comments</h4><p>1K</p></div>
+            </div>
+            <div class="service-buy">
+              <strong>Rs 1,500</strong>
+              <a class="mini-order" href="https://wa.me/923198682932?text=Hello%20DIGITAL%20STORE%2C%20I%20want%20to%20order%3A%20TikTok%20Comments%20%E2%80%94%201K%20%E2%80%94%20Rs%201%2C500" target="_blank" rel="noopener">ORDER →</a>
+            </div>
+          </article>
+          <article class="service-row">
+            <div class="service-main">
+              <span class="service-dot"></span>
+              <div><h4>TikTok Views</h4><p>10K</p></div>
+            </div>
+            <div class="service-buy">
+              <strong>Rs 250</strong>
+              <a class="mini-order" href="https://wa.me/923198682932?text=Hello%20DIGITAL%20STORE%2C%20I%20want%20to%20order%3A%20TikTok%20Views%20%E2%80%94%2010K%20%E2%80%94%20Rs%20250" target="_blank" rel="noopener">ORDER →</a>
+            </div>
+          </article>
+          <article class="service-row">
+            <div class="service-main">
+              <span class="service-dot"></span>
+              <div><h4>YouTube Subscribers</h4><p>1K</p></div>
+            </div>
+            <div class="service-buy">
+              <strong>Rs 7,000</strong>
+              <a class="mini-order" href="https://wa.me/923198682932?text=Hello%20DIGITAL%20STORE%2C%20I%20want%20to%20order%3A%20YouTube%20Subscribers%20%E2%80%94%201K%20%E2%80%94%20Rs%207%2C000" target="_blank" rel="noopener">ORDER →</a>
+            </div>
+          </article>
+          <article class="service-row">
+            <div class="service-main">
+              <span class="service-dot"></span>
+              <div><h4>YouTube Views</h4><p>1K</p></div>
+            </div>
+            <div class="service-buy">
+              <strong>Rs 350</strong>
+              <a class="mini-order" href="https://wa.me/923198682932?text=Hello%20DIGITAL%20STORE%2C%20I%20want%20to%20order%3A%20YouTube%20Views%20%E2%80%94%201K%20%E2%80%94%20Rs%20350" target="_blank" rel="noopener">ORDER →</a>
+            </div>
+          </article>
+          <article class="service-row">
+            <div class="service-main">
+              <span class="service-dot"></span>
+              <div><h4>YouTube Likes</h4><p>1K</p></div>
+            </div>
+            <div class="service-buy">
+              <strong>Rs 450</strong>
+              <a class="mini-order" href="https://wa.me/923198682932?text=Hello%20DIGITAL%20STORE%2C%20I%20want%20to%20order%3A%20YouTube%20Likes%20%E2%80%94%201K%20%E2%80%94%20Rs%20450" target="_blank" rel="noopener">ORDER →</a>
+            </div>
+          </article>
+          <article class="service-row">
+            <div class="service-main">
+              <span class="service-dot"></span>
+              <div><h4>YouTube Comments</h4><p>1K</p></div>
+            </div>
+            <div class="service-buy">
+              <strong>Rs 1,200</strong>
+              <a class="mini-order" href="https://wa.me/923198682932?text=Hello%20DIGITAL%20STORE%2C%20I%20want%20to%20order%3A%20YouTube%20Comments%20%E2%80%94%201K%20%E2%80%94%20Rs%201%2C200" target="_blank" rel="noopener">ORDER →</a>
+            </div>
+          </article>
+          <article class="service-row">
+            <div class="service-main">
+              <span class="service-dot"></span>
+              <div><h4>YouTube Watch Time</h4><p>4K Hours</p></div>
+            </div>
+            <div class="service-buy">
+              <strong>Rs 2,500</strong>
+              <a class="mini-order" href="https://wa.me/923198682932?text=Hello%20DIGITAL%20STORE%2C%20I%20want%20to%20order%3A%20YouTube%20Watch%20Time%20%E2%80%94%204K%20Hours%20%E2%80%94%20Rs%202%2C500" target="_blank" rel="noopener">ORDER →</a>
+            </div>
+          </article>
+          <article class="service-row">
+            <div class="service-main">
+              <span class="service-dot"></span>
+              <div><h4>Facebook Page Likes</h4><p>1K</p></div>
+            </div>
+            <div class="service-buy">
+              <strong>Rs 1,200</strong>
+              <a class="mini-order" href="https://wa.me/923198682932?text=Hello%20DIGITAL%20STORE%2C%20I%20want%20to%20order%3A%20Facebook%20Page%20Likes%20%E2%80%94%201K%20%E2%80%94%20Rs%201%2C200" target="_blank" rel="noopener">ORDER →</a>
+            </div>
+          </article>
+          <article class="service-row">
+            <div class="service-main">
+              <span class="service-dot"></span>
+              <div><h4>Facebook Followers</h4><p>1K</p></div>
+            </div>
+            <div class="service-buy">
+              <strong>Rs 1,200</strong>
+              <a class="mini-order" href="https://wa.me/923198682932?text=Hello%20DIGITAL%20STORE%2C%20I%20want%20to%20order%3A%20Facebook%20Followers%20%E2%80%94%201K%20%E2%80%94%20Rs%201%2C200" target="_blank" rel="noopener">ORDER →</a>
+            </div>
+          </article>
+          <article class="service-row">
+            <div class="service-main">
+              <span class="service-dot"></span>
+              <div><h4>Facebook Post Likes</h4><p>1K</p></div>
+            </div>
+            <div class="service-buy">
+              <strong>Rs 250</strong>
+              <a class="mini-order" href="https://wa.me/923198682932?text=Hello%20DIGITAL%20STORE%2C%20I%20want%20to%20order%3A%20Facebook%20Post%20Likes%20%E2%80%94%201K%20%E2%80%94%20Rs%20250" target="_blank" rel="noopener">ORDER →</a>
+            </div>
+          </article>
+          <article class="service-row">
+            <div class="service-main">
+              <span class="service-dot"></span>
+              <div><h4>Facebook Post Shares</h4><p>1K</p></div>
+            </div>
+            <div class="service-buy">
+              <strong>Rs 250</strong>
+              <a class="mini-order" href="https://wa.me/923198682932?text=Hello%20DIGITAL%20STORE%2C%20I%20want%20to%20order%3A%20Facebook%20Post%20Shares%20%E2%80%94%201K%20%E2%80%94%20Rs%20250" target="_blank" rel="noopener">ORDER →</a>
+            </div>
+          </article>
+          <article class="service-row">
+            <div class="service-main">
+              <span class="service-dot"></span>
+              <div><h4>Facebook Post Comments</h4><p>1K</p></div>
+            </div>
+            <div class="service-buy">
+              <strong>Rs 300</strong>
+              <a class="mini-order" href="https://wa.me/923198682932?text=Hello%20DIGITAL%20STORE%2C%20I%20want%20to%20order%3A%20Facebook%20Post%20Comments%20%E2%80%94%201K%20%E2%80%94%20Rs%20300" target="_blank" rel="noopener">ORDER →</a>
+            </div>
+          </article>
+          <article class="service-row">
+            <div class="service-main">
+              <span class="service-dot"></span>
+              <div><h4>X / Twitter Followers</h4><p>1K</p></div>
+            </div>
+            <div class="service-buy">
+              <strong>Rs 1,500</strong>
+              <a class="mini-order" href="https://wa.me/923198682932?text=Hello%20DIGITAL%20STORE%2C%20I%20want%20to%20order%3A%20X%20/%20Twitter%20Followers%20%E2%80%94%201K%20%E2%80%94%20Rs%201%2C500" target="_blank" rel="noopener">ORDER →</a>
+            </div>
+          </article>
+          <article class="service-row">
+            <div class="service-main">
+              <span class="service-dot"></span>
+              <div><h4>X / Twitter Likes</h4><p>1K</p></div>
+            </div>
+            <div class="service-buy">
+              <strong>Rs 150</strong>
+              <a class="mini-order" href="https://wa.me/923198682932?text=Hello%20DIGITAL%20STORE%2C%20I%20want%20to%20order%3A%20X%20/%20Twitter%20Likes%20%E2%80%94%201K%20%E2%80%94%20Rs%20150" target="_blank" rel="noopener">ORDER →</a>
+            </div>
+          </article>
+          <article class="service-row">
+            <div class="service-main">
+              <span class="service-dot"></span>
+              <div><h4>X / Twitter Retweets</h4><p>1K</p></div>
+            </div>
+            <div class="service-buy">
+              <strong>Rs 250</strong>
+              <a class="mini-order" href="https://wa.me/923198682932?text=Hello%20DIGITAL%20STORE%2C%20I%20want%20to%20order%3A%20X%20/%20Twitter%20Retweets%20%E2%80%94%201K%20%E2%80%94%20Rs%20250" target="_blank" rel="noopener">ORDER →</a>
+            </div>
+          </article>
+          <article class="service-row">
+            <div class="service-main">
+              <span class="service-dot"></span>
+              <div><h4>Telegram Members</h4><p>1K</p></div>
+            </div>
+            <div class="service-buy">
+              <strong>Rs 1,200</strong>
+              <a class="mini-order" href="https://wa.me/923198682932?text=Hello%20DIGITAL%20STORE%2C%20I%20want%20to%20order%3A%20Telegram%20Members%20%E2%80%94%201K%20%E2%80%94%20Rs%201%2C200" target="_blank" rel="noopener">ORDER →</a>
+            </div>
+          </article>
+          <article class="service-row">
+            <div class="service-main">
+              <span class="service-dot"></span>
+              <div><h4>Telegram Views</h4><p>1K</p></div>
+            </div>
+            <div class="service-buy">
+              <strong>Rs 200</strong>
+              <a class="mini-order" href="https://wa.me/923198682932?text=Hello%20DIGITAL%20STORE%2C%20I%20want%20to%20order%3A%20Telegram%20Views%20%E2%80%94%201K%20%E2%80%94%20Rs%20200" target="_blank" rel="noopener">ORDER →</a>
+            </div>
+          </article>
+          <article class="service-row">
+            <div class="service-main">
+              <span class="service-dot"></span>
+              <div><h4>LinkedIn Followers</h4><p>1K</p></div>
+            </div>
+            <div class="service-buy">
+              <strong>Rs 1,500</strong>
+              <a class="mini-order" href="https://wa.me/923198682932?text=Hello%20DIGITAL%20STORE%2C%20I%20want%20to%20order%3A%20LinkedIn%20Followers%20%E2%80%94%201K%20%E2%80%94%20Rs%201%2C500" target="_blank" rel="noopener">ORDER →</a>
+            </div>
+          </article>
+          <article class="service-row">
+            <div class="service-main">
+              <span class="service-dot"></span>
+              <div><h4>LinkedIn Post Likes</h4><p>1K</p></div>
+            </div>
+            <div class="service-buy">
+              <strong>Rs 250</strong>
+              <a class="mini-order" href="https://wa.me/923198682932?text=Hello%20DIGITAL%20STORE%2C%20I%20want%20to%20order%3A%20LinkedIn%20Post%20Likes%20%E2%80%94%201K%20%E2%80%94%20Rs%20250" target="_blank" rel="noopener">ORDER →</a>
+            </div>
+          </article>
+          <article class="service-row">
+            <div class="service-main">
+              <span class="service-dot"></span>
+              <div><h4>WhatsApp Poll Votes</h4><p>1K</p></div>
+            </div>
+            <div class="service-buy">
+              <strong>Rs 500</strong>
+              <a class="mini-order" href="https://wa.me/923198682932?text=Hello%20DIGITAL%20STORE%2C%20I%20want%20to%20order%3A%20WhatsApp%20Poll%20Votes%20%E2%80%94%201K%20%E2%80%94%20Rs%20500" target="_blank" rel="noopener">ORDER →</a>
+            </div>
+          </article></div>
+      </section></div>
+</section>
+
+<section class="section google-feature"><div class="feature-frame">
+  <div class="feature-copy"><div class="section-label">FEATURED DIGITAL PLAN</div><h2>GOOGLE PLAN <em>18 MONTHS.</em></h2>
+  <p>A bundled productivity and AI plan with cloud storage, Gemini features and Google Flow credits.</p>
+  <div class="feature-price"><del>Rs 3,000</del><span>❌</span><b>→ Rs 2,500</b></div>
+  <a class="btn btn-gold" href="https://wa.me/923198682932?text=Hello%20DIGITAL%20STORE%2C%20I%20want%20to%20order%3A%20Google%20Plan%20%E2%80%94%2018%20Month%20Plan%20%E2%80%94%20Rs%202%2C500" target="_blank" rel="noopener">ORDER GOOGLE PLAN ↗</a></div>
+  <div class="feature-list"><span>Google Photos</span><span>Google Drive</span><span>5 TB Storage</span><span>Gemini Pro</span><span>Advanced AI Assistant</span><span>Better Writing &amp; Research</span><span>Image Generation</span><span>Coding Support</span><span>Smarter Productivity</span><span>Google Flow</span><span>1050 Credits / Month</span><span>AI Video Creation</span></div>
+</div></section>
+
+<section class="section why" id="why"><div class="section-label">WHY DIGITAL STORE</div><h2>SIMPLE FROM <em>CHOICE TO ORDER.</em></h2>
+<div class="why-grid"><article><span>01</span><h3>SEE THE PRICE</h3><p>Every listed service shows its current catalog price before you order.</p></article>
+<article><span>02</span><h3>CHOOSE YOUR SERVICE</h3><p>Open a category and select exactly what you need.</p></article>
+<article><span>03</span><h3>ORDER DIRECTLY</h3><p>Use the order button to open WhatsApp with your service prefilled.</p></article>
+<article><span>04</span><h3>GET SUPPORT</h3><p>Need help choosing? Contact DIGITAL STORE on WhatsApp.</p></article></div></section>
+
+<section class="section faq" id="faq"><div class="section-label">FAQ</div><h2>QUESTIONS, <em>ANSWERED.</em></h2>
+<div class="faq-list"><details open><summary>How do I place an order?</summary><p>Open any service and press ORDER. WhatsApp will open with the service name, details and price already written in the message.</p></details>
+<details><summary>Can I ask before ordering?</summary><p>Yes. Use the WhatsApp button and send your question before placing an order.</p></details>
+<details><summary>Are the prices visible on the website?</summary><p>Yes. Service prices are shown directly in each category.</p></details>
+<details><summary>How can I contact DIGITAL STORE?</summary><p>WhatsApp: 03198682932.</p></details></div></section>
+
+<section class="final-cta" id="contact"><div><div class="section-label">READY WHEN YOU ARE</div><h2>YOUR NEXT DIGITAL<br><em>ORDER STARTS HERE.</em></h2></div><a class="btn btn-gold big" href="https://wa.me/923198682932" target="_blank" rel="noopener">WHATSAPP 03198682932 ↗</a></section>
 </main>
-<footer><div class="brand"><span class="brand-mark">DS</span><span>DIGITAL <b>STORE</b></span></div><p>ALL YOUR DIGITAL NEEDS IN ONE PLACE</p><span>© DIGITAL STORE</span></footer>
-<div id="service-modal" class="service-modal" aria-hidden="true"><div class="modal-backdrop" data-close></div><div class="modal-panel"><button class="modal-close" data-close>×</button><div id="modal-content"></div></div></div>
-<script src="catalog.js"></script><script src="script.js"></script>
+<footer><div><b>DIGITAL STORE</b><span>ALL YOUR DIGITAL NEEDS IN ONE PLACE</span></div><p>© 2026 DIGITAL STORE. All rights reserved.</p><a href="#top">BACK TO TOP ↑</a></footer>
+<script src="script.js" defer></script>
 </body></html>
