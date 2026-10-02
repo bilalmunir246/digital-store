@@ -1,40 +1,15 @@
-(() => {
-  "use strict";
-  const ready = (fn) => {
-    if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", fn, { once: true });
-    else fn();
-  };
-  ready(() => {
-    const buttons = Array.from(document.querySelectorAll(".category-tabs button"));
-    const panels = Array.from(document.querySelectorAll(".category-panel"));
-    const menuBtn = document.getElementById("menuBtn");
-    const navLinks = document.querySelector(".nav-links");
-
-    const filter = (target) => {
-      buttons.forEach((btn) => btn.classList.toggle("active", btn.dataset.target === target));
-      panels.forEach((panel) => panel.classList.toggle("hidden", target !== "cat-all" && panel.id !== target));
-    };
-
-    buttons.forEach((btn) => btn.addEventListener("click", () => filter(btn.dataset.target)));
-
-    if (menuBtn && navLinks) {
-      menuBtn.addEventListener("click", () => navLinks.classList.toggle("mobile-open"));
-      navLinks.addEventListener("click", () => navLinks.classList.remove("mobile-open"));
-    }
-
-    const revealItems = document.querySelectorAll(".reveal");
-    if ("IntersectionObserver" in window) {
-      const observer = new IntersectionObserver((entries, obs) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("visible");
-            obs.unobserve(entry.target);
-          }
-        });
-      }, { threshold: 0.12 });
-      revealItems.forEach((el) => observer.observe(el));
-    } else {
-      revealItems.forEach((el) => el.classList.add("visible"));
-    }
-  });
-})();
+const WA='https://wa.me/923198682932?text=';
+const data=[
+{key:'tiktok',title:'TikTok Services',accent:'#ff0050',logo:'♪',desc:'Accounts, coins and TikTok services',items:[['TikTok Account Unfreeze','Rs 970','Permanent Service','♪'],['TikTok UK Account','Rs 450','Fresh UK Account','♪'],['TikTok Coins (300)','Rs 1,216.5','Instant Delivery','●'],['TikTok Coins (500)','Rs 1,883.5','Instant Delivery','●'],['TikTok Coins (1000)','Rs 3,580','Instant Delivery','●']]},
+{key:'creative',title:'Video Editor & Creative Tools',accent:'#8b5cf6',logo:'✂',desc:'CapCut and Canva tools',items:[['CapCut Pro — 1 Account','Rs 350','1 Month','C'],['CapCut Pro — 4 Accounts','Rs 825','1 Month','C'],['CapCut Pro — 5 Accounts','Rs 970','1 Month','C'],['CapCut Pro — 10 Accounts','Rs 2,130','1 Month','C'],['CapCut Pro — 180 Days','Rs 680','6 Months','C'],['CapCut Pro — Own Email','Rs 535','1 Month','C'],['Canva Account','Rs 680','1 Month','Canva'],['Canva Pro — Lifetime (Option 1)','Rs 250','Lifetime','Canva'],['Canva Pro — Lifetime (Option 2)','Rs 350','Lifetime','Canva']]},
+{key:'ai',title:'AI & Productivity Tools',accent:'#10b981',logo:'✦',desc:'ChatGPT and Gemini plans',items:[['ChatGPT Plus — Shared','Rs 400','1 Month','AI'],['ChatGPT Plus — Semi Private','Rs 535','1 Month','AI'],['ChatGPT Plus — Private','Rs 2,420','1 Month','AI'],['ChatGPT Plus — Own Account','Rs 3,000','1 Month','AI'],['Gemini — 18 Months / 5 Users','Rs 497.3','18 Months','G'],['Gemini — 18 Months / 5 Accounts','Rs 1,550','18 Months','G']]},
+{key:'ent',title:'Entertainment & VPN',accent:'#e50914',logo:'▶',desc:'Streaming and VPN services',items:[['YouTube Premium','Rs 419','30 Days','▶'],['Netflix','Rs 390','Single Screen / 1 Month','N'],['Netflix','Rs 477','Private Single Screen / 1 Month','N'],['Netflix','Rs 1,405','5 Screens / 1 Month','N'],['NordVPN','Rs 332','3 Months','VPN']]},
+{key:'software',title:'Software & Digital Tools',accent:'#2563eb',logo:'▣',desc:'Software, themes and digital tools',items:[['Windows 10/11 Activation Key','Rs 400','Lifetime','⊞'],['USA Debit Card','Rs 1,550','1 Month','▣'],['Top 200 Shopify Themes','Rs 199.76','Lifetime Access','S'],['YouTube CPM Software','Rs 593','Lifetime Access','▶'],['IDM Pakistan Complete Course','Rs 600','Lifetime Access','IDM']]},
+{key:'likee',title:'Likee Services',accent:'#ec4899',logo:'♥',desc:'Likes, views, reposts and followers',items:[['Likee Likes','Rs 917.075','10K+/Day • Per 1000','♥'],['Likee Likes','Rs 450.175','1K+/Day • Per 1000','♥'],['Likee Views','Rs 633.6','1K+/Day • Per 1000','▶'],['Likee Views','Rs 440.17','500+/Day • Per 1000','▶'],['Likee Reposts','Rs 850.275','500+/Day • Per 1000','↻'],['Likee Reposts','Rs 456.845','10K+/Day • Per 1000','↻'],['Likee Followers','Rs 2,281.2588','10K+/Day • Per 1000','●'],['Likee Followers','Rs 1,127.18','500+/Day • Per 1000','●']]},
+{key:'social',title:'Social Media Growth',accent:'#f59e0b',logo:'↗',desc:'Platform-by-platform growth services',items:[['Instagram — Followers','Rs 3,000','1K','IG'],['Instagram — Likes','Rs 200','1K','♥'],['Instagram — Comments','Rs 300','1K','◌'],['Instagram — Reels Views','Rs 500','50K','▶'],['TikTok — Followers','Rs 1,200','1K','♪'],['TikTok — Likes','Rs 350','1K','♥'],['TikTok — Comments','Rs 1,500','1K','◌'],['TikTok — Views','Rs 250','10K','◉'],['YouTube — Subscribers','Rs 7,000','1K','▶'],['YouTube — Views','Rs 350','1K','◉'],['YouTube — Likes','Rs 450','1K','♥'],['YouTube — Comments','Rs 1,200','1K','◌'],['YouTube — Watch Time','Rs 2,500','4K Hours','◷'],['Facebook — Page Likes','Rs 1,200','1K','f'],['Facebook — Followers','Rs 1,200','1K','f'],['Facebook — Post Likes','Rs 250','1K','♥'],['Facebook — Post Shares','Rs 250','1K','↗'],['Facebook — Post Comments','Rs 300','1K','◌'],['X / Twitter — Followers','Rs 1,500','1K','X'],['X / Twitter — Likes','Rs 150','1K','♥'],['X / Twitter — Retweets','Rs 250','1K','↻'],['Telegram — Members','Rs 1,200','1K','➤'],['Telegram — Views','Rs 200','1K','◉'],['LinkedIn — Followers','Rs 1,500','1K','in'],['LinkedIn — Post Likes','Rs 250','1K','♥'],['WhatsApp — Poll Votes','Rs 500','1K','W']]}
+];
+function order(name){return WA+encodeURIComponent('Hello DIGITAL STORE, I want to order: '+name);}
+const grid=document.getElementById('categoryGrid'), catalog=document.getElementById('catalog');
+data.forEach((c,i)=>{grid.insertAdjacentHTML('beforeend',`<article class="cat-card" style="--accent:${c.accent}"><div class="cat-logo">${c.logo}</div><h3>${c.title}</h3><p>${c.desc}</p><span class="open">OPEN EXPERIENCE →</span></article>`);let rows=c.items.map(x=>`<div class="service-row" style="--accent:${c.accent}"><div class="service-icon">${x[3]}</div><div><strong>${x[0]}</strong><small>${x[2]}</small></div><div><span class="price">${x[1]}</span><a class="order" target="_blank" href="${order(x[0]+' — '+x[2]+' — '+x[1])}">ORDER</a></div></div>`).join('');catalog.insertAdjacentHTML('beforeend',`<section class="catalog-panel reveal" id="${c.key}"><div class="catalog-head"><div class="cat-logo" style="--accent:${c.accent}">${c.logo}</div><div><h3>${c.title}</h3><p>${c.desc}</p></div></div><div class="service-list">${rows}</div></section>`)});
+const google={title:'Google Plan',accent:'#d8ad5b',logo:'G'};catalog.insertAdjacentHTML('beforeend',`<section class="catalog-panel reveal"><div class="catalog-head"><div class="cat-logo" style="--accent:#d8ad5b">G</div><div><h3>Google Plan — 18 Month Plan</h3><p>Included features — not separate orderable services</p></div></div><div class="service-list">${['Google Photos','Google Drive','5 TB storage','Gemini Pro','Advanced AI Assistant','Better Writing & Research','Image Generation','Coding Support','Smarter Productivity','Google Flow','1050 credits every month','AI video creation with Google Flow'].map(x=>`<div class="service-row" style="--accent:#d8ad5b"><div class="service-icon">✓</div><div><strong>${x}</strong><small>Included in Google Plan</small></div><div class="price">Included</div></div>`).join('')}</div><div style="margin-top:18px;color:#aaa;font-size:13px"><s>Rs 3,000</s> ❌ <b style="color:#f1d18b">→ Rs 2,500</b> <a class="order" target="_blank" href="${order('Google Plan — 18 Month Plan — Rs 2,500')}">ORDER</a></div></section>`);
+const observer=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target)}}),{threshold:.08});document.querySelectorAll('.reveal').forEach(x=>observer.observe(x));document.querySelector('.menu').addEventListener('click',()=>{const n=document.querySelector('.nav nav');n.style.display=n.style.display==='flex'?'none':'flex';n.style.position='absolute';n.style.top='82px';n.style.left='0';n.style.right='0';n.style.padding='25px';n.style.background='#09090a';n.style.flexDirection='column'});
